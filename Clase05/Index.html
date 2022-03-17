@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <form action="insertar.jsp" method="post"  >
+            <fieldset>
+                <legend>Datos</legend>
+                <div>
+                    <label for="nombre">Ingrese nombre:</label>
+                    <input type="" id="nombre" name="nombre" required > 
+                </div>
+
+                <div>
+                    <label for="nac">Ingrese Fecha de nac:</label>
+                    <input id="nac" type="date" required >
+
+                    <label for="horanac">Ingrese Hora de nac:</label>
+                    <input id="horanac" type="time" required >
+
+                    <label for="edad">Edad:</label>
+                    <input id="edad" type="text" value="40" readonly="true" disabled="true"  >
+                </div>
+
+
+                    <select name="provincia" id="prov" >
+                        <option value="Capital" >Capital</option>
+                        <option value="Corrientes"  >Corrientes</option>
+                        <option value="Santa Cruz">Santa Cruz</option>
+                        <option value="" selected>Seleccione una opcion...</option>
+                    </select>
+
+                    <div>
+                        <label for="mascotas" >Seleccione su mascota</label>
+                        <select name="" id="" multiple>
+                                <optgroup label="4 patas">
+                                        <option value="perro" >Perro </option>
+                                        <option value="Gato" >Gato </option>
+                                        <option value="Conejo" >Conejo </option>
+                                        <option value="Hamster" >Hamster </option>
+                                </optgroup>
+
+                                <optgroup label="Aves">
+                                    <option value="Loro" >Loro </option>
+                                    <option value="Canario" >Canario </option>
+                                    <option value="Paloma" >Paloma </option>
+                            </optgroup>
+                        </select> 
+                    </div>
+                    <fieldset>
+                        <legend>Lenguajes</legend>
+                        
+                        <label for="php" > PHP
+                            <input id="php" name="lenguajes" type="checkbox" value="php"    >
+                        </label>
+                        <label for="java" > JAVA
+                            <input id="java" name="lenguajes" type="checkbox" value="Java"   >
+                        </label>
+                        <label for="c" > C#
+                            <input id="c" name="lenguajes" type="checkbox" value="C#"   >
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Lenguajes de preferencias?</legend>
+                        <label for="Python" >Python
+                            <input id="" name="leng" type="radio" >
+                        </label>
+                        <label for="Ruby" >Ruby
+                            <input id="" name="leng" type="radio" >
+                        </label>
+                    </fieldset>
+            </fieldset>
+
+            <label for="color" >Seleccione un color:</label>
+            <input type="color" name="color" id="color">
+
+            <input type="submit" >
+        </form>
+
+        
+    
+    </body>
+</html>
