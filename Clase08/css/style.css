@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Lobster&family=Oswald&family=Roboto+Mono:wght@100&family=Smokum&display=swap');
+        
+
+
+.anclas{
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+    margin-right: 10px;
+
+}
+
+.sec{
+    width: 800px;
+    height: 350px;
+    background-color: blueviolet;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+
+
+.navegador
+{
+text-align: right;
+background-color: yellow;
+border: 2px solid black;
+width: 600px;
+height: 60px;
+margin: auto;
+margin-top: 50px;
+margin-bottom: 50px;
+padding-top: 5px;
+/*
+margin: 50px 100px 50px 100px;
+margin-top: 50px;
+margin-right: 100px;
+margin-bottom: 50px;
+margin-left: 100px;
+
+padding-top: 25px;
+padding: 5px 5px 5px 5px;
+padding-top: ;
+padding-left: ;
+padding-right: ;
+padding-bottom: ;
+*/
+
+}
