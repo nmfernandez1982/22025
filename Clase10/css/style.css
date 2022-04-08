@@ -1,0 +1,30 @@
+._div{background-color: blue;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    color: red;
+    font-size: 40px;
+   }
+
+
+ ._div:hover{
+       background-color: red;
+       color: blue;
+   }
+
+
+.rojo:focus{background-color: blue;color: red;}
+.azul:focus{background-color: red;color: blue;}
+
+input{border: 2px solid black;}
+
+input:out-of-range{background-color: red;}
+input:in-range{background-color: green;}
+
+
+.resaltado_rojo:after{color: red;content: '<---Rojo';}
+.resaltado_azul:after{color: blue;content: '<---Azul';}
+
+.clase:required{border: 5px dashed red}
+
+

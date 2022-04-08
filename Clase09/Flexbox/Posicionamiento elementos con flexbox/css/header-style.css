@@ -1,0 +1,12 @@
+.contenedor {
+    display: flex;
+}
+
+.bloque {
+    background: red;
+}
+
+
+/* .linea {
+    background: blue;
+} */
