@@ -1,0 +1,44 @@
+body
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.izquierda
+{
+ background-color: yellow;
+ width: 50%;
+ height: 100vh;   
+}
+
+.derecha
+{
+    background-image: url("https://picsum.photos/800");
+    background-image: center ;
+    background-image:  cover ;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100vh; 
+}
+
+
+#pantalla_dividida
+{
+    display: flex;
+}
+.boton
+{
+    margin: auto;
+}
+
+a
+{
+    border: 3px solid white;
+    text-decoration: none;
+    color:white;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
