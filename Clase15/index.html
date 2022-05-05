@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+
+        <script>
+
+                autos= new Array("Fiat","Chevrolet","Ford","Renault");
+
+                numeros=new Array(12 ,34 ,2 ,11 ,41 ,16,100,67,100);
+
+                todo=new Array("Ford",12,true,"Fiat",100.7);
+                var prueba=todo[3];
+                //i=i+1;
+                //i++;
+              
+                for(let i=0;i<numeros.length;i++)
+                {
+                console.log("Pos.:"+i+" "+numeros[i]);
+                }
+
+                numeros[2] = 100;
+                console.log("--------------------------");
+
+                for(let i=0;i<numeros.length;i++)
+                {
+                console.log("Pos.:"+i+" "+numeros[i]);
+                }
+
+                console.log("--------------------------");
+
+                autos[1]="Chevrolet";
+
+                for(let i=0;i<autos.length;i++)
+                {
+                console.log("Pos.:"+i+" "+autos[i]);
+                }
+
+                console.log("--------------------------");
+                for(let i=0;i<todo.length;i++)
+                {
+                console.log("Pos.:"+i+" "+todo[i]);
+                }
+
+                console.log("--------------------------");
+                for(let x in todo)
+                {
+                    console.log("Dato: "+todo[x]);  
+                }
+                console.log("Imprimir solo los 100s");
+                for(let x=0;x<numeros.length;x++)
+                {
+                    if(numeros[x]==100)
+                    {
+                    console.log("Dato en la pos.:["+x+"]"+numeros[x]);  
+                    }
+                }
+                console.log("Imprimir solo los pares");
+                for(let x=0;x<numeros.length;x++)
+                {
+                    if(numeros[x]%2==0)
+                    {
+                    console.log("Dato en la pos.:["+x+"]"+numeros[x]);  
+                    }
+                }
+
+
+                //while{}
+                // do while {}
+
+                var valor=0;                
+                console.log("Do While");                
+                do{
+                    console.log("Contenido del Do While"+valor);
+                    valor++;
+                }while(valor<5);
+
+                
+
+
+
+
+        </script>
+    
+    </body>
+</html>
