@@ -1,0 +1,64 @@
+use base22025;
+drop table clientes;
+
+CREATE TABLE CLIENTES(
+ID_CLIENTE INT NOT NULL auto_increment,
+NOMBRE varchar(30),
+APELLIDO varchar(30),
+DNI  INT NOT NULL,
+MAIL varchar(30) unique,
+DIRECCION  varchar(30),
+ID_LOCALIDAD int NOT NULL,
+ID_PROVINCIA int NOT NULL,
+FECHA_ALTA date,
+ESTADO BOOL NOT NULL,
+primary key(ID_CLIENTE)
+);
+
+
+insert into clientes values (1,'ALberto','Juarez',30876123,'sg187@gmail.com','Cordoba 1234',1,1,'2022-05-23',1);
+insert into clientes values (2,'Pablo','Sarmiento',30876123,'sg157@gmail.com','Cordoba 1234',1,1,'2022-05-23',1);
+insert into clientes values (3,'Cecilia','Perez',30876123,'sg188@gmail.com','Cordoba 1234',1,1,'2022-05-23',1);
+insert into clientes values (4,'Juan','Gomez',30876123,'sg189@gmail.com','Cordoba 1234',1,1,'2022-05-23',1);
+insert into clientes values (5,'Pilar','Hernandez',30876123,'sg127@gmail.com','Cordoba 1234',1,1,'2022-05-23',1);
+
+insert into clientes values (6,'Pedro','Alvarez',30876123,'sg12@gmail.com','Cordoba 1234',1,4,'2022-05-23',1);
+
+insert into clientes values (7,'Agustin','Alvarez',30876123,'sg16@gmail.com','Cordoba 1234',1,5,'2022-05-23',1);
+
+
+
+select * from clientes;
+
+
+CREATE TABLE PROVINCIAS
+(
+ID_PROVINCIA int NOT NULL,
+PROVINCIA varchar(25),
+primary key(ID_PROVINCIA)
+);
+
+insert provincias values (1,'Buenos Aires');
+insert provincias values (2,'Cordoba');
+insert provincias values (3,'Misiones');
+insert provincias values (4,'Santa Fe');
+insert provincias values (5,'Entre Rios');
+
+select * from provincias;
+
+
+
+ALTER TABLE clientes
+add constraint clientes_provincias
+foreign key (ID_PROVINCIA) references provincias(ID_PROVINCIA);
+
+
+select * from provincias;
+
+
+delete from provincias where ID_PROVINCIA=4;
+
+
+select NOMBRE,APELLIDO,DNI,provincias.provincia from clientes
+inner join provincias on clientes.ID_PROVINCIA=provincias.ID_PROVINCIA;
+

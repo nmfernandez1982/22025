@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">     
+    </head>
+    <body>
+
+
+
+        <script>
+
+            Funcion1();
+            Funcion1();
+            Funcion1();
+            Funcion1();
+
+   
+
+            
+
+
+            var dato1=40;
+            var dato2=40;
+
+            Funcion2(dato1,dato2);
+
+            
+
+            var dato3=12;
+            var dato4=12;    
+            resultado=Funcion3(dato3,dato4);   
+            
+            console.log("la suma ahora es: "+resultado);
+
+
+            mensaje("nicolas","Hola Mundo");
+
+            mensaje();
+
+
+
+
+            function Funcion3(x,y)
+            {
+                let suma=x+y;
+                return suma;
+            }
+            function Funcion1()
+            {
+                console.log("Hola mundo......");
+            }
+
+            function Funcion2(x,y)
+            {
+                let suma=x+y;
+                console.log("La suma es: "+suma);
+            }    
+
+            function mensaje(nombre='Anonimo',mensaje='No tengo')
+            {
+             console.log(nombre+" "+mensaje);   
+            }
+
+
+
+            let edad=prompt("Ingrese Edad",18);
+
+            verificar(edad);
+
+            function verificar(edad)
+            {
+                if(edad<18)
+                {
+                    alert("Ingreso No permitirdo");
+                }
+                else
+                {
+                    alert("Acceso Autirizado");
+                }
+            }
+
+
+            var nombre="nicolas";
+            var nombre2="JULIETA";
+
+            console.log(nombre.toUpperCase());
+            console.log(nombre2.toLowerCase());
+            console.log(nombre2.length);
+            console.log(nombre2.slice(0,4));
+
+            var empresa="Nombre : Arcor";
+            console.log(empresa.replace("Arcor","Terrabusi"));
+
+
+
+
+
+        </script>
+    
+    </body>
+</html>
