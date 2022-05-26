@@ -1,0 +1,81 @@
+use base22025;
+select * from clientes;
+
+/*
+insert
+update
+delete
+select
+*/
+
+select * from clientes;
+
+
+insert into clientes values (16,'Ambar','Hernández',45922345,'ambar1@gmail.com','Sarmiento 345',1,2,now(),0);
+
+update clientes set FECHA_ALTA='2020-05-01' where ID_CLIENTE=4 ; 
+
+update clientes set ESTADO=0 where ID_CLIENTE=12 ; 
+
+update clientes set ESTADO=0 where ID_CLIENTE=13 ; 
+
+delete from clientes where ID_CLIENTE=13;
+
+
+select * from clientes where MAIL like 'sg%';
+select * from clientes where MAIL like '%gmail.com';
+select * from clientes where MAIL like 'ambar@gmail.com';
+
+select * from clientes where APELLIDO like 'Hernandez';
+select * from clientes where APELLIDO like 'Hern_ndez';
+
+select * from clientes where APELLIDO not like 'Hernandez';
+
+select * from clientes where APELLIDO like 'G%z';
+
+select * from clientes;
+
+select * from clientes where APELLIDO like 'Hernandez' and estado=1;
+
+
+select * from clientes where  estado=1 and APELLIDO like 'Hernandez' or APELLIDO like 'Grinder';
+select * from clientes where  estado=1 and (APELLIDO like 'Hernandez' or APELLIDO like 'Grinder');
+
+select * from clientes where FECHA_ALTA BETWEEN '2020-01-01' and '2021-12-31';
+select * from clientes where FECHA_ALTA NOT BETWEEN '2020-01-01' and '2021-12-31';
+
+select * from clientes where year(FECHA_ALTA)=2020 or year(FECHA_ALTA)=2021; 
+
+select * from clientes where year(FECHA_ALTA)=2022 ;
+
+select * from clientes where FECHA_ALTA  BETWEEN '2022-01-01' and now();
+
+select * from clientes;
+
+select * from clientes where ID_CLIENTE in (1,5,8,12,15,16);
+
+select * from clientes where ID_CLIENTE in (1,5,8,12,15,16) and ESTADO=1;
+
+
+select distinct(ID_PROVINCIA) from clientes;
+
+select NOMBRE,APELLIDO,DNI,clientes.ID_PROVINCIA,PROVINCIA from clientes
+inner join provincias on provincias.ID_PROVINCIA=clientes.ID_PROVINCIA;
+
+select distinct(clientes.ID_PROVINCIA),PROVINCIA from clientes
+inner join provincias on provincias.ID_PROVINCIA=clientes.ID_PROVINCIA;
+
+select count(ID_CLIENTE) from clientes;
+select count(*) from clientes where estado =1;
+
+select * from clientes;
+
+select sum(DNI) from clientes;
+
+select count(*) as 'CUENTA DNI',sum(DNI) as 'SUMA DNI',avg(DNI) as 'PROMEDIO DNI'  from clientes ;
+
+select * from clientes where estado =0;
+
+select ID_CLIENTE,NOMBRE,APELLIDO,REPLACE(estado,0,'No Habilitado') as 'Estado' from clientes where estado =0;
+
+select ID_CLIENTE,NOMBRE,APELLIDO,REPLACE(estado,1,'Habilitado') as 'Estado' from clientes where estado =1;
